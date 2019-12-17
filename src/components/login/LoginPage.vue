@@ -91,7 +91,7 @@ export default {
   }
   &__form {
     background-color: white;
-    border-radius: 12px;
+    border-radius: 0;
     box-shadow: 0 2px 8px 3px $color-storm;
     padding: 25px;
   }

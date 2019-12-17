@@ -1,33 +1,33 @@
 <template>
-  <div class="book-card card">
-    <button class="book-card__controls book-card__controls--read-more" @click="readMore">
+  <div class="wod-card card">
+    <button class="wod-card__controls wod-card__controls--read-more" @click="readMore">
       <img
-        class="book-card__image card-img-top"
+        class="wod-card__image card-img-top"
         :src="'http://wods-api.herokuapp.com/' + wod.example"
         alt
       />
-      <p class="book-card__controls-text">Comments</p>
+      <p class="wod-card__controls-text">Comments</p>
     </button>
-    <div class="book-card__content">
-      <div class="book-card__information">
-        <p class="book-card__label">Title</p>
-        <p class="book-card__text">{{ wod.title }}</p>
+    <div class="wod-card__content">
+      <div class="wod-card__information">
+        <p class="wod-card__label">Title</p>
+        <p class="wod-card__text">{{ wod.title }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Type</p>
-        <p class="book-card__text">{{ wod.type }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Type</p>
+        <p class="wod-card__text">{{ wod.type }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Difficulty</p>
-        <p class="book-card__text">{{ wod.difficulty }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Difficulty</p>
+        <p class="wod-card__text">{{ wod.difficulty }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Workout</p>
-        <p class="book-card__text">{{ wod.workout }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Workout</p>
+        <p class="wod-card__text">{{ wod.workout }}</p>
       </div>
-      <div v-if="role === 'Administrator'" class="book-card__controls">
-        <button @click="updateWod" class="book-card__button btn" type="button">Update</button>
-        <button @click="deleteWod(wod._id)" class="book-card__button btn" type="button">Delete</button>
+      <div v-if="role === 'Administrator'" class="wod-card__controls">
+        <button @click="updateWod" class="wod-card__button btn" type="button">Update</button>
+        <button @click="deleteWod(wod._id)" class="wod-card__button btn" type="button">Delete</button>
       </div>
     </div>
   </div>
@@ -59,10 +59,10 @@ export default {
 </script>
 
 <style lang="scss">
-.book-card {
+.wod-card {
   background: $color-nude;
   border: 2px solid $color-storm;
-  border-radius: 6px;
+  border-radius: 0;
   margin: 0 0 20px 0;
   max-width: 320px;
   width: 320px;

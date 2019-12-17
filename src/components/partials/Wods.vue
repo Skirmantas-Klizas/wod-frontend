@@ -1,6 +1,6 @@
 <template>
-  <div class="books">
-    <div class="books__cards">
+  <div class="wods">
+    <div class="wods__cards">
       <WodCard
         v-for="(wod, i) in wods"
         :key="wod._id + i"
@@ -39,7 +39,7 @@ export default {
   },
   data() {
     return {
-      wod: '',
+      wod: "",
       readMoreOpen: false,
       isOpen: false
     };
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-.books {
+.wods {
   &__cards {
     display: grid;
     grid-template-columns: auto auto auto auto;

@@ -5,7 +5,7 @@
       <h2 class="admin__heading">Users</h2>
       <Users></Users>
     </div>
-    <div class="admin__books">
+    <div class="admin__wods">
       <h2 class="admin__heading">Wods</h2>
       <AddWodModal :role="role"></AddWodModal>
       <Wods :role="role"></Wods>
@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss">
 .admin {
-  &__books {
+  &__wods {
     background: $color-moon;
     padding: 35px 50px;
   }

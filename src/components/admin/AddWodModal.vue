@@ -1,12 +1,12 @@
 <template>
-  <div class="add-book">
-    <button @click="isOpen = !isOpen" class="add-book__button btn" type="button">Add wod</button>
+  <div class="add-wod">
+    <button @click="isOpen = !isOpen" class="add-wod__button btn" type="button">Add wod</button>
     <transition name="my-modal">
       <div v-if="this.isOpen">
         <div class="overlay" @click.self="isOpen = !isOpen">
           <div class="my-modal">
             <h2 class="my-modal__heading">ADD WOD</h2>
-            <form @submit.prevent="handleSubmit" class="add-book__form form-group">
+            <form @submit.prevent="handleSubmit" class="add-wod__form form-group">
               <label class="form-group__label" for="title">Title</label>
               <input
                 v-model="wod.title"
@@ -165,7 +165,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.add-book {
+.add-wod {
   &__button {
     background: $color-nude !important;
     border: 2px solid $color-storm;

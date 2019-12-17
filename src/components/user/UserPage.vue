@@ -1,7 +1,7 @@
 <template>
   <div class="user">
     <Header :role="role"></Header>
-    <div class="user__books">
+    <div class="user__wods">
       <h2 class="user__heading">Wods</h2>
       <Wods :role="role"></Wods>
     </div>
@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 .user {
-  &__books {
+  &__wods {
     background: $color-moon;
     padding: 115px 50px 35px;
   }

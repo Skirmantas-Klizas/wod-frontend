@@ -17,8 +17,8 @@ export default {};
 <style lang="scss">
 .footer {
   align-items: center;
-  background-color: darken($color-leather, 25);
-  box-shadow: 0px 0px 12px $color-storm;
+  background-color: darken($color-storm, 25);
+  // box-shadow: 0px 0px 12px $color-storm;
   color: white;
   display: flex;
   font-family: $Roboto;

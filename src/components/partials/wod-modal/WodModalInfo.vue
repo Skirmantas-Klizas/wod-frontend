@@ -1,26 +1,26 @@
 <template>
-  <div class="book-card card">
+  <div class="wod-card card">
     <img
-      class="book-card__image card-img-top"
+      class="wod-card__image card-img-top"
       :src="'http://wods-api.herokuapp.com/' + wod.example"
       alt
     />
-    <div class="book-card__content">
-      <div class="book-card__information">
-        <p class="book-card__label">Title</p>
-        <p class="book-card__text">{{ wod.title }}</p>
+    <div class="wod-card__content">
+      <div class="wod-card__information">
+        <p class="wod-card__label">Title</p>
+        <p class="wod-card__text">{{ wod.title }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Type</p>
-        <p class="book-card__text">{{ wod.type }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Type</p>
+        <p class="wod-card__text">{{ wod.type }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Difficulty</p>
-        <p class="book-card__text">{{ wod.difficulty }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Difficulty</p>
+        <p class="wod-card__text">{{ wod.difficulty }}</p>
       </div>
-      <div class="book-card__information">
-        <p class="book-card__label">Workout</p>
-        <p class="book-card__text">{{ wod.workout }}</p>
+      <div class="wod-card__information">
+        <p class="wod-card__label">Workout</p>
+        <p class="wod-card__text">{{ wod.workout }}</p>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.book-card {
+.wod-card {
   background-color: white;
   border: 0;
   border-right: 1px solid $color-storm;

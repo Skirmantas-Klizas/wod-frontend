@@ -1,9 +1,9 @@
 <template>
-  <div class="update-book">
+  <div class="update-wod">
     <transition name="my-modal">
       <div v-if="this.readMoreOpen">
         <div class="overlay" @click.self="onClick">
-          <div class="book-modal my-modal">
+          <div class="wod-modal my-modal">
             <WodModalInfo :wod="wod"></WodModalInfo>
             <WodModalResponses :wod="wod" :role="role"></WodModalResponses>
           </div>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.book-modal {
+.wod-modal {
   background: white;
   height: 620px;
   display: flex;

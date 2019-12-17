@@ -1,12 +1,12 @@
 <template>
-  <div class="modal-reviews">
+  <div class="modal-responses">
     <button
       v-if="role === 'Administrator' || role === 'User'"
-      class="modal-reviews__button btn"
+      class="modal-responses__button btn"
       @click="isOpen = !isOpen"
     >{{ !isOpen ? 'Add response' : 'Cancel' }}</button>
-    <form @submit.prevent="handleSubmit" v-if="isOpen" class="modal-reviews__add-form">
-      <div class="form-group__radio">
+    <form @submit.prevent="handleSubmit" v-if="isOpen" class="modal-responses__add-form">
+      <div class="response_form-group__radio">
         <div class="custom-control custom-radio custom-control-inline">
           <input
             type="radio"
@@ -30,8 +30,8 @@
           <label class="custom-control-label" for="sc">Sc</label>
         </div>
       </div>
-      <div class="modal-reviews__form-inputs">
-        <div class="modal-reviews__input-group">
+      <div class="modal-responses__form-inputs">
+        <div class="modal-responses__input-group">
           <label class="form-group__label" for="comment">Comment</label>
           <input
             :class="{ 'is-invalid': submitted && !response.comment }"
@@ -47,7 +47,7 @@
           >Incorrect Comment</small>
         </div>
       </div>
-      <input class="modal-reviews__button btn" type="submit" value="Add Response" />
+      <input class="modal-responses__button btn" type="submit" value="Add Response" />
     </form>
     <p v-if="wod.responses.length === 0">No responses</p>
     <div v-for="response in wod.responses" :key="response._id">
@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       response: {
-        adjustments: "",
+        adjustments: "Rx",
         comment: "",
         wod: this.wod._id
       },
@@ -101,11 +101,11 @@ export default {
     width: 100%;
   }
 }
-.modal-reviews {
+.modal-responses {
   overflow-y: auto;
   width: 100%;
   &__button {
-    background-color: $color-nude;
+    background-color: lighten(#858585b2, 15);
     border-radius: 0;
     text-transform: uppercase;
     width: 100%;
@@ -126,6 +126,10 @@ export default {
     display: flex;
     flex-direction: column;
     width: 90%;
+  }
+  .response_form-group__radio {
+    padding-left: 20px;
+    padding-top: 15px;
   }
 }
 </style>

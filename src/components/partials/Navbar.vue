@@ -93,11 +93,11 @@ export default {
   flex-direction: row;
   padding: 0;
   &__hamburger {
-    color: $color-moon;
+    color: white;
     &:focus,
     &:hover {
       cursor: pointer;
-      color: darken($color-moon, 15%);
+      color: darken($color-nude, 15%);
     }
     @media all and (min-width: 992px) {
       display: none;

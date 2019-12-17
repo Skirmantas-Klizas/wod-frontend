@@ -1,11 +1,11 @@
 <template>
-  <div class="update-book">
+  <div class="update-wod">
     <transition name="my-modal">
       <div v-if="this.isOpen">
         <div class="overlay" @click.self="onClick">
           <div class="my-modal">
             <h2 class="my-modal__heading">EDIT WOD</h2>
-            <form @submit.prevent="update" class="update-book__form form-group">
+            <form @submit.prevent="update" class="update-wod__form form-group">
               <label class="form-group__label" for="title">Title</label>
               <input
                 v-model="wod.title"
@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.update-book {
+.update-wod {
   &__button {
     background: $color-moon !important;
     border: 2px solid $color-storm;

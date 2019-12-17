@@ -1,25 +1,13 @@
 <template>
   <div class="header">
     <router-link class="brand" v-if="this.role === 'Guest'" to="/" exact>
-      <div>WOD</div>
-      <!-- <span class="brand__letter brand__letter--1">B</span>
-      <span class="brand__letter brand__letter--2">O</span>
-      <span class="brand__letter brand__letter--3">O</span>
-      <span class="brand__letter brand__letter--4">k</span>-->
+      <div class="brand__name">WOD</div>
     </router-link>
     <router-link class="brand" v-if="this.role === 'User'" to="/user">
-      <div>WOD</div>
-      <!-- <span class="brand__letter brand__letter--1">B</span>
-      <span class="brand__letter brand__letter--2">O</span>
-      <span class="brand__letter brand__letter--3">O</span>
-      <span class="brand__letter brand__letter--4">k</span>-->
+      <div class="brand__name">WOD</div>
     </router-link>
     <router-link class="brand" v-if="this.role === 'Administrator'" to="/admin">
-      <div>WOD</div>
-      <!-- <span class="brand__letter brand__letter--1">B</span>
-      <span class="brand__letter brand__letter--2">O</span>
-      <span class="brand__letter brand__letter--3">O</span>
-      <span class="brand__letter brand__letter--4">k</span>-->
+      <div class="brand__name">WOD</div>
     </router-link>
     <Navbar :role="role"></Navbar>
   </div>
@@ -44,21 +32,13 @@ export default {
   transition: transform 0.3s ease-out;
   &:hover {
     transform: scale(1.2);
-    text-decoration: none;
+    // text-decoration: none;
+    cursor: pointer;
+    color: darken($color-nude, 15%);
   }
-  // &__letter {
-  //   &--1 {
-  //     color: $color-nude;
-  //   }
-  //   &--2,
-  //   &--3 {
-  //     color: $color-moon;
-  //   }
-  //   &--4 {
-  //     color: $color-leather;
-  //     font-size: 16px;
-  //   }
-  // }
+  &__name {
+    color: white;
+  }
 }
 .header {
   align-items: center;

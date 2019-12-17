@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :role="role"></Header>
-    <div class="guest__books">
+    <div class="guest__wods">
       <h2 class="guest__heading">Wods</h2>
       <Wods :role="role"></Wods>
     </div>
@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 .guest {
-  &__books {
+  &__wods {
     background: $color-moon;
     padding: 115px 50px 35px;
   }

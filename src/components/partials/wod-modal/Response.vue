@@ -1,20 +1,21 @@
 <template>
-  <div class="review">
-    <div class="review__content">
-      <div class="review__heading">
-        <p class="review__heading-text">{{ response.user.name }}</p>
+  <div class="response">
+    <div class="response__content">
+      <div class="response__heading">
+        <p class="response__heading-text">{{ response.user.name }}</p>
         <div
           v-if="user._id === response.user._id || user.role === 'Administrator'"
-          class="review__heading-controls"
+          class="response__heading-controls"
         >
-          <i @click="isOpen = !isOpen" class="review__heading-edit fas fa-pen"></i>
-          <i class="review__heading-delete fas fa-trash-alt" @click="_delete()"></i>
+          <i @click="isOpen = !isOpen" class="response__heading-edit fas fa-pen"></i>
+          <i class="response__heading-delete fas fa-trash-alt" @click="_delete()"></i>
         </div>
       </div>
-      <p class="review__description">{{ response.comment }}</p>
+      <p class="response__comment">Adjustments: {{ response.adjustments }}</p>
+      <p class="response__comment">{{ response.comment }}</p>
     </div>
-    <div class="review__edit">
-      <form @submit.prevent="update" v-if="isOpen" class="review__edit-form">
+    <div class="response__edit">
+      <form @submit.prevent="update" v-if="isOpen" class="response__edit-form">
         <div class>
           <div class="form-group__radio">
             <div class="custom-control custom-radio custom-control-inline">
@@ -56,9 +57,9 @@
             >Incorrect Comment</small>
           </div>
         </div>
-        <div class="review__edit-controls">
-          <input class="review__edit-button btn" type="submit" value="Edit response" />
-          <button class="review__edit-button btn" type="btn" @click="isOpen = !isOpen">Cancel</button>
+        <div class="response__edit-controls">
+          <input class="response__edit-button btn" type="submit" value="Edit response" />
+          <button class="response__edit-button btn" type="btn" @click="isOpen = !isOpen">Cancel</button>
         </div>
       </form>
     </div>
@@ -104,16 +105,17 @@ export default {
 </script>
 
 <style lang="scss">
-.review {
+.response {
   background-color: lighten($color-moon, 10);
   display: flex;
   flex-direction: column;
   width: 100%;
   &__content {
+    background-color: $color-nude;
     border-bottom: 1px solid black;
     padding: 5px 10px;
   }
-  &__description {
+  &__comment {
     font-size: 14px;
     margin: 6px 0;
   }

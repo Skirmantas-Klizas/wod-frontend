@@ -77,7 +77,6 @@ export default {
         name: this.user.name,
         role: this.user.role
       };
-      console.log(editUser);
       if (this.user.name.trim() !== "") {
         this.update(editUser);
         this.onClick(e);
@@ -119,7 +118,7 @@ export default {
   width: 500px;
   padding: 20px;
   background-color: $color-moon;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2px 8px 3px $color-storm;
   font-family: $Roboto;
